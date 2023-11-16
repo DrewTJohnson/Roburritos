@@ -1,0 +1,10 @@
+.components-panel .components-base-control {
+  width: 100%;
+}
+.components-panel .components-base-control img {
+  width: 100%;
+  background-color: #efefef;
+}
+.components-panel .components-base-control button {
+  align-self: flex-end;
+}

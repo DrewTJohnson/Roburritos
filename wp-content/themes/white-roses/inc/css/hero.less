@@ -1,0 +1,115 @@
+@import url('./variables');
+
+.entry-header {
+    background-color: @primaryOrange;
+    margin-bottom: 2rem;
+    .hero-container {
+        position: relative;
+        min-height: 200px;
+        @media only screen and (min-width: 950px) {
+            min-height: 300px;
+        }
+        &.has-img {
+            display: flex;
+            flex-direction: row;
+            .hero-text {
+                flex: 1 0 50%;
+                .page-intro-text {
+                    max-width: 100%;
+                }
+            }
+            .hero-img {
+                flex: 1 0 50%;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+                @media @notDesktop {
+                    display: none;
+                }
+            }
+        }
+        .intro-content {
+            min-height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                margin: 0;
+            }
+        }
+        .hero-cta {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            .cta-container {
+                a {
+                    background: #1f1f1f;
+                    padding-block: 25px;
+                    padding-inline: 50px;
+                    border-radius: 5px;
+                    color: white;
+                }
+            }
+        }
+    }
+    .split-cta-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .left-cta, .right-cta {
+            flex: 1 0 50%;
+            text-align: center;
+            .btn-square {
+                display: block;
+                color: black;
+                padding: 1rem 2rem;
+            }
+            @media @mobile {
+                flex: 1 0 100%;
+            }
+        }
+        .left-cta {
+            transition: flex 0.2s ease-in-out;
+            .btn-square {
+                background-color: @lightOrange;
+                text-decoration: underline;
+                text-underline-offset: 5px;
+                text-decoration-color: transparent;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    text-decoration-color: inherit;
+                }
+            }
+        }
+        .right-cta {
+            transition: flex 0.2s ease-in-out;
+            .btn-square {
+                background-color: @primaryOrange;
+                color: @white;
+                text-decoration: underline;
+                text-underline-offset: 5px;
+                text-decoration-color: transparent;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    text-decoration-color: inherit;
+                }
+            }
+        }
+    }
+}
+
+.woocommerce-products-header {
+    background-color: @primaryOrange;
+    margin-bottom: 2rem;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (min-width: 950px) {
+        min-height: 300px;
+    }
+}
