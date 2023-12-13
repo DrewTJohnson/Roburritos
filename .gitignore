@@ -2,3 +2,7 @@
 node_modules/
 
 wp-content/plugins
+
+robs-site
+robs-site.pub
+./ssh
