@@ -52,9 +52,8 @@
 					?>
 				</div>
 
-				<nav id="site-navigation" class="main-navigation" aria-labelledby="#nav1">
+				<nav id="site-navigation" class="main-navigation desktop" aria-labelledby="#nav1">
 					<p class="aria-landmark-hidden" id="nav1">Main Navigation</p>
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'white-roses'); ?></button>
 					<?php
 					wp_nav_menu(
 						array(
@@ -73,6 +72,24 @@
 						</svg>
 					</button>
 				</nav><!-- #site-navigation -->
+
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="sr-only"><?php esc_html_e('Primary Menu', 'white-roses'); ?></span>&#8801;</button>
+
 			</div>
 		</header><!-- #masthead -->
+
+		<!-- Mobile navigation -->
+		<nav id="site-navigation" class="main-navigation mobile hidden" aria-labelledby="#nav1">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="sr-only"><?php esc_html_e('Primary Menu', 'white-roses'); ?></span>&#10006;</button>
+			<?php get_search_form(); ?>
+					<p class="aria-landmark-hidden" id="nav1">Main Navigation</p>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
 		<?php get_search_form(); ?>

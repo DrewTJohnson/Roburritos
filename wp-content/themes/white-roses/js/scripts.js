@@ -49,10 +49,32 @@ jQuery(document).ready( function($) {
         })
     }
 
+    $('body').on('init_checkout', function() {
+        if( $('input[name="shipping_method[0]"]:checked').val().includes('local') ) {
+            $('.local-destination').addClass('local_pickup');
+        }
+    })
+
+    $('body').on('updated_checkout', function() {
+        if( $('input[name="shipping_method[0]"]:checked').val().includes('local') ) {
+            $('.local-destination').addClass('local_pickup');
+
+        }
+    })
+
+    $('body').on('update_checkout', function() {
+        if( $('input[name="shipping_method[0]"]:checked').val().includes('local') ) {
+            $('.local-destination').addClass('local_pickup');
+        }
+    })
+
 
     $('button.search-toggle').on('click', function() {
         $( this ).toggleClass('search-open');
         $('form.search-form').toggleClass('open');
     })
-});
 
+    $('button.menu-toggle').on('click', function() {
+        $('nav.mobile').toggleClass('hidden');
+    })
+});

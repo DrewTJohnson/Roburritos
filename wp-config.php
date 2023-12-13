@@ -83,7 +83,8 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', true );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
+define( 'WP_HOME', 'https://roburritos-new.ddev.site' );
+define( 'WP_SITEURL', 'https://roburritos-new.ddev.site' );
 
 
 /* That's all, stop editing! Happy publishing. */

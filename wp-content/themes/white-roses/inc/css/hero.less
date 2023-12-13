@@ -5,10 +5,7 @@
     margin-bottom: 2rem;
     .hero-container {
         position: relative;
-        min-height: 200px;
-        @media only screen and (min-width: 950px) {
-            min-height: 300px;
-        }
+        min-height: 300px;
         &.has-img {
             display: flex;
             flex-direction: row;
@@ -24,9 +21,6 @@
                     object-fit: cover;
                     height: 100%;
                     width: 100%;
-                }
-                @media @notDesktop {
-                    display: none;
                 }
             }
         }
@@ -51,6 +45,10 @@
                     padding-inline: 50px;
                     border-radius: 5px;
                     color: white;
+                    @media only screen and (max-width: 794px) {
+                        padding-block: 16px;
+                        padding-inline: 25px;
+                    }
                 }
             }
         }

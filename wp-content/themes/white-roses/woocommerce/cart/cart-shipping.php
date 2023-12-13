@@ -43,6 +43,9 @@ $calculator_text          = '';
 					</li>
 				<?php endforeach; ?>
 			</ul>
+
+			<span class="local-destination"><?php echo carbon_get_theme_option( 'checkout_alert' ) ?></span>
+			
 			<?php if ( is_cart() ) : ?>
 				<p class="woocommerce-shipping-destination">
 					<?php

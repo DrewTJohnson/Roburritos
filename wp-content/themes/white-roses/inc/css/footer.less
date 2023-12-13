@@ -12,7 +12,7 @@
     min-height: 150px;
     .site-info {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr 1fr 1fr 1fr;
         width: 100%;
     }
     .site-title {
@@ -22,6 +22,9 @@
         color: @white;
     }
     .site-branding {
+        grid-column: auto;
+        grid-row: auto;
+        text-align: center;
         a.custom-logo-link {
             img {
                 width: 250px;
@@ -47,6 +50,10 @@
     }
     .footer-inquiries {
         grid-column: 3 / span 2;
+        @media only screen and (max-width: 1024px) {
+            grid-column: auto;
+            grid-row: auto;
+        }
     }
     .footer-callout {
         ul {

@@ -40,13 +40,13 @@ function white_roses_create_shortcode_custom_post_types( $atts ) {
         $description = get_post_meta( $post_id, 'menu-item-description', true);
         $price = get_post_meta( $post_id, 'menu-item-price', true);
 
-        $html .= '<div class="menu__item">';
+        $html .= '<p class="menu__item">';
         if ( $description )
-            $html .= '<p class="menu__item-title-description">'. $title . ' - ' . $description . '</p>';
+            $html .= '<span class="menu__item-title-description">'. $title . ' - ' . $description . '</span>';
         else
-            $html .= '<p class="menu__item-title-description">' . $title . '</p>';
-        $html .= '<p class="menu__item-price">' . $price . '</p>';
-        $html .= '</div>';
+            $html .= '<span class="menu__item-title-description">' . $title . '</span>';
+        $html .= '<span class="menu__item-price">' . $price . '</span>';
+        $html .= '</p>';
 
     endwhile;
     $html .= '</div>';

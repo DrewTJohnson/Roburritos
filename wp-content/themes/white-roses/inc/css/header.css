@@ -25,6 +25,14 @@ header.site-header {
   color: #1F1F1F;
   z-index: 2;
 }
+header.site-header .menu-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  header.site-header .menu-toggle {
+    display: block;
+  }
+}
 header.site-header a {
   color: #1F1F1F;
   position: relative;
@@ -74,9 +82,6 @@ header.site-header .header-wrap nav {
   justify-content: flex-end;
   align-items: center;
   column-gap: 15px;
-}
-header.site-header .header-wrap nav .menu-toggle {
-  display: none;
 }
 header.site-header .header-wrap nav .menu-main-navigation-container ul.nav-menu {
   list-style-type: none;
@@ -140,6 +145,84 @@ header.site-header .header-wrap nav .search-toggle.search-open .open {
 header.site-header .header-wrap nav .search-toggle.search-open .close {
   opacity: 1;
 }
+@media only screen and (max-width: 768px) {
+  header.site-header .header-wrap nav.desktop {
+    display: none;
+  }
+}
+header.site-header .header-wrap .menu-toggle {
+  font-size: 3rem;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+nav.mobile {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #F8F7EE;
+  transition: right 0.5s ease-in-out;
+}
+nav.mobile ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+nav.mobile .search-form {
+  display: flex;
+  position: relative;
+  top: auto;
+  background-color: transparent;
+  margin-right: 0;
+  padding-inline: 2rem;
+}
+nav.mobile .search-form label {
+  display: inline-block;
+  width: 100%;
+}
+nav.mobile .search-form label input {
+  border-radius: 0;
+  border: 3px solid #1F1F1F;
+  width: 100%;
+}
+nav.mobile .search-form input.search-submit {
+  height: 100%;
+  border-radius: 0;
+  box-shadow: 0px 0px 0px 0px #1F1F1F;
+}
+nav.mobile .search-form input.search-submit:hover {
+  box-shadow: 3px 3px 0px 0px #1F1F1F;
+}
+nav.mobile .menu {
+  padding-inline: 2rem;
+}
+nav.mobile .menu li {
+  padding-block: 1rem;
+  border-bottom: 2px solid #1F1F1F;
+}
+nav.mobile .menu li:last-child {
+  border-bottom: none;
+}
+nav.mobile.hidden {
+  right: -9999px;
+}
+nav.mobile .menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 16px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
 .search-form {
   position: absolute;
   top: -999px;
@@ -173,7 +256,7 @@ header.site-header .header-wrap nav .search-toggle.search-open .close {
   box-shadow: 3px 3px 0px 0px white;
 }
 .search-form.open {
-  top: 173px;
+  top: 140px;
 }
 @keyframes shake {
   50% {

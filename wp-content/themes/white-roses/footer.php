@@ -11,7 +11,7 @@
 
 ?>
 
-<?php if ( !is_page( 'cart' ) ) : ?>
+<?php if ( !is_checkout() && !is_cart() ) : ?>
 <div class="pre-footer">
 	<h2 class="wp-block-heading has-text-align-center is-style-rotated-heading"><?php echo carbon_get_theme_option( 'prefooter_text' ); ?></h2>
 	<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-layout-1 wp-block-buttons-is-layout-flex">
