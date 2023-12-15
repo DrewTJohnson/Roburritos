@@ -77,4 +77,13 @@ jQuery(document).ready( function($) {
     $('button.menu-toggle').on('click', function() {
         $('nav.mobile').toggleClass('hidden');
     })
+
+    $('.hero-cta .cta-container a').on('mouseenter', function() {
+        $('.hero-cta span').toggleClass('animate');
+    })
+
+    $('.hero-cta .cta-container a').on('mouseleave', function() {
+        $('.hero-cta span').toggleClass('animate');
+    })
+
 });

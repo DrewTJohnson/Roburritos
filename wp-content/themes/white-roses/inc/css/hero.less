@@ -38,13 +38,61 @@
             top: 60%;
             left: 50%;
             transform: translate(-50%, 0%);
+
+            @media only screen and (max-width: 1200px) {
+                top: 40%;
+            }
             .cta-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                span {
+                    width: 75px;
+                    height: 75px;
+
+                    @media only screen and (max-width: 768px) {
+                        display: none;
+                    }
+
+                    img {
+                        width: 75px;
+                        height: 75px;
+                    }
+                    &.animate {
+                        img {
+                            animation: shake 0.3s 5 linear;
+                        }
+                    }
+                }
+                .icon-container-top-left {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                .icon-container-bottom-left {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+                .icon-container-top-right {
+                    grid-column: 6;
+                    grid-row: 1;
+                }
+                .icon-container-bottom-right {
+                    grid-column: 6;
+                    grid-row: 3;
+                }
                 a {
+                    grid-column: 2 / span 4;
+                    grid-row: 2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
                     background: #1f1f1f;
                     padding-block: 25px;
                     padding-inline: 50px;
                     border-radius: 5px;
                     color: white;
+
                     @media only screen and (max-width: 794px) {
                         padding-block: 16px;
                         padding-inline: 25px;

@@ -530,6 +530,13 @@ function white_roses_register_block_styles() {
 			'default'	=>	true,
 		),
 	);
+	register_block_style('core/button',
+		array(
+			'name' =>	'secondary-button',
+			'label'	=>	__('Secondary Button'),
+			'default'	=>	false,	
+		),
+	);
 }
 
 add_action( 'init', 'white_roses_register_block_styles' );

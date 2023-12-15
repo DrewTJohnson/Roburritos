@@ -49,6 +49,9 @@
   gap: 40px;
   margin-block: 40px;
 }
+.is-style-menu-and-image:last-child {
+  padding-bottom: 0;
+}
 .is-style-menu-and-image.has-media-on-the-right figure {
   position: relative;
   background: #FF9E26;
@@ -118,21 +121,43 @@
 .is-style-rotated-heading {
   transform: rotate(3deg);
 }
-.wp-block-button.is-style-primary-button {
+.wp-block-button.is-style-primary-button,
+.wp-block-button.is-style-secondary-button {
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
   backdrop-filter: none;
 }
-.wp-block-button.is-style-primary-button a {
+.wp-block-button.is-style-primary-button a,
+.wp-block-button.is-style-secondary-button a {
+  box-shadow: none;
   border-radius: 3px;
+}
+.wp-block-button.is-style-primary-button:hover,
+.wp-block-button.is-style-secondary-button:hover {
+  box-shadow: -3px 3px 0px 0px #1F1F1F;
+}
+.wp-block-button.is-style-primary-button:hover a,
+.wp-block-button.is-style-secondary-button:hover a {
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.wp-block-button.is-style-primary-button {
+  box-shadow: 0px 0px 0px 0px #1F1F1F;
+}
+.wp-block-button.is-style-primary-button a {
   color: #1F1F1F;
   background: #FF9E26;
-  box-shadow: 0px 0px 0px 0px #1F1F1F;
 }
 .wp-block-button.is-style-primary-button:hover {
   box-shadow: -3px 3px 0px 0px #1F1F1F;
 }
-.wp-block-button.is-style-primary-button:hover a {
-  box-shadow: none;
-  backdrop-filter: none;
+.wp-block-button.is-style-secondary-button {
+  box-shadow: 0px 0px 0px 0px #FF9E26;
+}
+.wp-block-button.is-style-secondary-button a {
+  color: #F8F7EE;
+  background: #1F1F1F;
+}
+.wp-block-button.is-style-secondary-button:hover {
+  box-shadow: -3px 3px 0px 0px #FF9E26;
 }

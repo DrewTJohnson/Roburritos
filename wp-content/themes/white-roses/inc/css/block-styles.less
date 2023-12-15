@@ -41,6 +41,9 @@
     padding-bottom: 5rem;
     gap: 40px;
     margin-block: 40px;
+    &:last-child {
+        padding-bottom: 0;
+    }
     &.has-media-on-the-right {
         figure {
             position: relative;
@@ -115,21 +118,41 @@
     transform: rotate(3deg);
 }
 
-.wp-block-button.is-style-primary-button {
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-    backdrop-filter: none;
-    a {
+.wp-block-button {
+    &.is-style-primary-button, &.is-style-secondary-button {
         border-radius: 3px;
-        color: @black;
-        background: @primaryOrange;   
-        box-shadow: 0px 0px 0px 0px @black;
-    }
-    &:hover {
-        box-shadow: -3px 3px 0px 0px @black;
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: none;
         a {
             box-shadow: none;
-            backdrop-filter: none;
+            border-radius: 3px;
+        }
+        &:hover {
+            box-shadow: -3px 3px 0px 0px @black;
+            a {
+                box-shadow: none;
+                backdrop-filter: none;
+            }
+        }
+    }
+    &.is-style-primary-button {
+        box-shadow: 0px 0px 0px 0px @black;
+        a {
+            color: @black;
+            background: @primaryOrange;
+        }
+        &:hover {
+            box-shadow: -3px 3px 0px 0px @black;
+        }
+    }
+    &.is-style-secondary-button {
+        box-shadow: 0px 0px 0px 0px @primaryOrange;
+        a {
+            color: @white;
+            background: @black;
+        }
+        &:hover {
+            box-shadow: -3px 3px 0px 0px @primaryOrange;
         }
     }
 }

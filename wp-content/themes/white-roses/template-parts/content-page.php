@@ -38,7 +38,19 @@
 			<div class="hero-cta">
 				<div class="cta-container">
 					<?php if ( is_front_page() ) : ?>
+						<span class="icon-container-top-left">
+							<img src="<?php echo get_template_directory_uri() ?>/inc/img/hotsauce-top.png" />
+						</span>
+						<span class="icon-container-bottom-left">
+							<img src="<?php echo get_template_directory_uri() ?>/inc/img/burrito-bottom.png" />
+						</span>
 						<a href="<?php echo $hero_cta_url ?>"><?php echo $hero_cta_text; ?></a>
+						<span class="icon-container-top-right">
+							<img src="<?php echo get_template_directory_uri() ?>/inc/img/burrito-top.png" />
+						</span>
+						<span class="icon-container-bottom-right">
+							<img src="<?php echo get_template_directory_uri() ?>/inc/img/hotsauce-bottom.png" />
+						</span>
 					<?php else : ?>
 						<a href="<?php echo $hero_cta_url ?>"><?php echo $hero_cta_text; ?></a>
 					<?php endif; ?>
