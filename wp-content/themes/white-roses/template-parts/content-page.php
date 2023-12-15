@@ -20,11 +20,18 @@
 			$hero_cta_text = get_post_meta( $page_id, 'page-hero-cta-text', true );
 		}
 		$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+		$featured_video_url = carbon_get_post_meta( get_the_ID(), 'featured_video' );
 	?>
 
 	<header class="entry-header">
 		<div class="hero-container <?php echo ( has_post_thumbnail() ) ? 'has-img' : null; ?>">
-			<?php if( has_post_thumbnail() ) : ?>
+			<?php if( $featured_video_url ) : ?>
+				<div class="hero-img">
+					<video playsinline autoplay muted loop id="bgvid">
+						<source src="<?php echo $featured_video_url; ?>" type="video/mp4">
+					</video>
+				</div>
+			<?php elseif( has_post_thumbnail() ) : ?>
 				<div class="hero-img">
 					<?php the_post_thumbnail(); ?>
 				</div>

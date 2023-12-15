@@ -618,6 +618,12 @@ template {
   position: relative;
   min-height: 300px;
 }
+.entry-header .hero-container .hero-img video {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 .entry-header .hero-container.has-img {
   display: flex;
   flex-direction: row;

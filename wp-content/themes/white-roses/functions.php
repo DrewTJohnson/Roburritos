@@ -80,6 +80,16 @@ function crb_attach_theme_options() {
 			Field::make( 'text', 'site_alert', 'Site Alert' ),
 			Field::make( 'text', 'checkout_alert', 'Checkout Alert' )
 		) );
+
+	Container::make( 'post_meta', 'Featured Video')
+		-> where( 'post_type', '=', 'page')
+		-> set_context( 'side' )
+		-> set_priority( 'high' )
+		-> add_fields( array (
+			Field::make( 'file', 'featured_video', 'Featured Video' )
+				-> set_type( 'video' )
+				-> set_value_type( 'url' )		
+		));
 }
 
 function easy_breadcrumbs($post) {
