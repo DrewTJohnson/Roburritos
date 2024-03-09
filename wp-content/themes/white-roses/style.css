@@ -341,7 +341,7 @@ template {
 }
 .footer .site-info {
   display: grid;
-  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 100%;
 }
 .footer .site-title {
@@ -351,8 +351,6 @@ template {
   color: #F8F7EE;
 }
 .footer .site-branding {
-  grid-column: auto;
-  grid-row: auto;
   text-align: center;
 }
 .footer .site-branding a.custom-logo-link img {
@@ -379,14 +377,20 @@ template {
 .footer .footer-inquiries ul li a {
   font-weight: normal;
 }
-.footer .footer-inquiries {
-  grid-column: 3 / span 2;
+.footer .footer-social ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
 }
-@media only screen and (max-width: 1024px) {
-  .footer .footer-inquiries {
-    grid-column: auto;
-    grid-row: auto;
-  }
+.footer .footer-social ul li a img {
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.footer .footer-social ul li a:hover img {
+  margin-top: -0.5rem;
 }
 .footer .footer-callout ul {
   list-style-type: none;
@@ -583,7 +587,7 @@ template {
   line-height: 1.5rem;
   color: #1F1F1F;
   padding-right: 4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 .menu__container .menu__item::before {
   content: '';
@@ -616,7 +620,12 @@ template {
 }
 .entry-header .hero-container {
   position: relative;
-  min-height: 300px;
+  min-height: 200px;
+}
+@media only screen and (max-width: 550px) {
+  .entry-header .hero-container {
+    min-height: auto;
+  }
 }
 .entry-header .hero-container .hero-img video {
   display: block;
@@ -666,6 +675,11 @@ template {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 600px) {
+  .entry-header .hero-container .hero-cta .cta-container {
+    display: block;
+  }
 }
 .entry-header .hero-container .hero-cta .cta-container span {
   width: 75px;
@@ -784,7 +798,13 @@ template {
 * {
   box-sizing: border-box;
 }
-html {
+html,
+body {
+  overflow-x: hidden;
+}
+html #page,
+body #page {
+  position: relative;
   overflow-x: hidden;
 }
 .sr-only {
@@ -804,9 +824,39 @@ main {
   backdrop-filter: brightness(30%);
   box-shadow: 10px 15px 12px -10px rgba(0, 0, 0, 0.34);
 }
+.site-alert {
+  background-color: #FF9E26;
+  color: #1F1F1F;
+  padding: 0.75em;
+  text-align: center;
+}
+.site-alert p {
+  font-weight: bold;
+  margin: 0;
+}
+.error-404 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.error-404 .page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
+.error-404 a {
+  padding-top: 40px;
+}
 .wp-block-image.rounded figure img {
   border-radius: 15px;
   margin: 1rem 0;
+}
+.error-404 img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  width: auto;
 }
 html {
   scroll-behavior: smooth;
@@ -1281,6 +1331,7 @@ html .woocommerce div.product .product_meta {
   gap: 16px;
   border-top: 3px solid #1F1F1F;
   padding-top: 2rem;
+  margin-top: 2rem;
 }
 html .woocommerce div.product .product_meta .sku_wrapper {
   display: none;
@@ -1290,6 +1341,9 @@ html .woocommerce div.product .product_meta .posted_in a {
 }
 html .woocommerce div.product .product_meta .tagged_as a {
   color: #1F1F1F;
+}
+html .woocommerce div.product .woocommerce-tabs .panel {
+  margin: 0;
 }
 html .woocommerce div.product .woocommerce-tabs ul.tabs {
   margin: 0;
@@ -1498,6 +1552,11 @@ html .woocommerce-cart #payment ul.payment_methods,
 html .woocommerce-checkout #payment ul.payment_methods {
   border-bottom: 3px solid #1F1F1F;
   padding-inline: 0;
+}
+html #add_payment_method #payment ul.payment_methods li.payment_method_ppcp-gateway,
+html .woocommerce-cart #payment ul.payment_methods li.payment_method_ppcp-gateway,
+html .woocommerce-checkout #payment ul.payment_methods li.payment_method_ppcp-gateway {
+  display: none;
 }
 html #add_payment_method #payment div.form-row,
 html .woocommerce-cart #payment div.form-row,
@@ -1893,13 +1952,14 @@ html nav.mobile {
   position: absolute;
   justify-content: center;
   flex-direction: column;
-  top: 0;
-  right: 0;
+  top: 35px;
+  left: 0;
   bottom: 0;
   z-index: 999;
   width: 100%;
+  height: 100vh;
   background-color: #F8F7EE;
-  transition: right 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 html nav.mobile ul {
   list-style-type: none;
@@ -1941,7 +2001,7 @@ html nav.mobile .menu li:last-child {
   border-bottom: none;
 }
 html nav.mobile.hidden {
-  right: -9999px;
+  left: -9999px;
 }
 html nav.mobile .menu-toggle {
   position: absolute;

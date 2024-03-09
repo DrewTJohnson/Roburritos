@@ -1,0 +1,36 @@
+// Media Queries
+@mobile: ~"only screen and (max-width: 480px)";
+@notDesktop: ~"only screen and (max-width: 800px)";
+@desktop: ~"only screen and (min-width: 1000px)";
+// Website Colors
+@white: #F8F7EE;
+@black: #1F1F1F;
+@darkGray: #333333;
+@primaryBlue: #466289;
+@primaryGreen: #009674;
+@primaryOrange: #FF9E26;
+@primaryRed: #ab0b3b;
+@lightOrange: #FFB739;
+@lightBlue: #DBE8F9;
+@offWhite: #F8F7EE;
+// Custom fonts
+@font-face {
+    font-family: 'PTSansNarrow-Bold';
+    src: src('../fonts/PTSansNarrow-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'PTSansNarrow-Regular';
+    src: src('../fonts/PTSansNarrow-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

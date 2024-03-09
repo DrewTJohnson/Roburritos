@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'PTSansNarrow-Bold';
+  src: src('../fonts/PTSansNarrow-Bold.ttf');
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'PTSansNarrow-Regular';
+  src: src('../fonts/PTSansNarrow-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

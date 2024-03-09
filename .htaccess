@@ -13,3 +13,11 @@ RewriteRule . /roburritos-new/index.php [L]
 </IfModule>
 
 # END WordPress
+
+<IfModule mod_php8.c>
+php_value upload_max_filesize 1026M
+php_value post_max_size 128M
+php_value memory_limit 256M
+php_value max_execution_time 0
+php_value max_input_time 0
+</IfModule>

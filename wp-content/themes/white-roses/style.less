@@ -8,18 +8,22 @@ Text Domain:  whiteroses
 */
 
 @import (less) '/inc/css/node_modules/normalize.css/normalize.css';
-@import '/inc/css/variables';
-@import '/inc/css/footer';
-@import '/inc/css/block-styles';
-@import '/inc/css/shortcodes';
-@import '/inc/css/hero';
+@import (less) '/inc/css/variables';
+@import (less) '/inc/css/footer';
+@import (less) '/inc/css/block-styles';
+@import (less) '/inc/css/shortcodes';
+@import (less) '/inc/css/hero';
 
 * {
     box-sizing: border-box;
 }
 
-html {
+html, body {
     overflow-x: hidden;
+    #page {
+        position: relative;
+        overflow-x: hidden
+    }
 }
 
 .sr-only {
@@ -46,6 +50,34 @@ main {
     }
 }
 
+// site alert styles
+.site-alert {
+    background-color: @primaryOrange;
+    color: @black;
+    padding: 0.75em;
+    text-align: center;
+    p {
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+// 404 page styles
+.error-404 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .page-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 1rem;
+    }
+    a {
+        padding-top: 40px;
+    }
+}
+
 .wp-block-image {
     &.rounded {
         figure {
@@ -54,6 +86,15 @@ main {
                 margin: 1rem 0;
             }
         }
+    }
+}
+
+.error-404 {
+    img {
+        max-width: 100%;
+        max-height: 400px;
+        height: auto;
+        width: auto;
     }
 }
 
@@ -553,6 +594,7 @@ html {
                 gap: 16px;
                 border-top: 3px solid @black;
                 padding-top: 2rem;
+                margin-top: 2rem;
                 .sku_wrapper {
                     display: none;
                 }
@@ -568,6 +610,9 @@ html {
                 }
             }
             .woocommerce-tabs {
+                .panel {
+                    margin: 0;
+                }
                 ul.tabs {
                     margin: 0;
                     &::before {
@@ -794,6 +839,12 @@ html {
         ul.payment_methods {
             border-bottom: 3px solid @black;
             padding-inline: 0;
+
+            li {
+                &.payment_method_ppcp-gateway {
+                    display: none;
+                }
+            }
         }
         div.form-row {
             padding: 0;

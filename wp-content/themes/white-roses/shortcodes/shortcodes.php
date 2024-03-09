@@ -42,9 +42,9 @@ function white_roses_create_shortcode_custom_post_types( $atts ) {
 
         $html .= '<p class="menu__item">';
         if ( $description )
-            $html .= '<span class="menu__item-title-description">'. $title . ' - ' . $description . '</span>';
+            $html .= '<span class="menu__item-title-description"><strong>'. $title . '</strong> - ' . $description . '</span>';
         else
-            $html .= '<span class="menu__item-title-description">' . $title . '</span>';
+            $html .= '<span class="menu__item-title-description"><strong>' . $title . '</strong></span>';
         $html .= '<span class="menu__item-price">' . $price . '</span>';
         $html .= '</p>';
 

@@ -52,19 +52,27 @@ jQuery(document).ready( function($) {
     $('body').on('init_checkout', function() {
         if( $('input[name="shipping_method[0]"]:checked').val().includes('local') ) {
             $('.local-destination').addClass('local_pickup');
+            $('#ship-to-different-address label').css('display', 'none');
+        } else {
+            $('#ship-to-different-address label').css('display', 'flex');
         }
     })
 
     $('body').on('updated_checkout', function() {
         if( $('input[name="shipping_method[0]"]:checked').val().includes('local') ) {
             $('.local-destination').addClass('local_pickup');
-
+            $('#ship-to-different-address label').css('display', 'none');
+        } else {
+            $('#ship-to-different-address label').css('display', 'flex');
         }
     })
 
     $('body').on('update_checkout', function() {
         if( $('input[name="shipping_method[0]"]:checked').val().includes('local') ) {
             $('.local-destination').addClass('local_pickup');
+            $('#ship-to-different-address label').css('display', 'none');
+        } else {
+            $('#ship-to-different-address label').css('display', 'flex');
         }
     })
 
@@ -84,6 +92,15 @@ jQuery(document).ready( function($) {
 
     $('.hero-cta .cta-container a').on('mouseleave', function() {
         $('.hero-cta span').toggleClass('animate');
+    })
+
+
+    $('.menu-toggle').on('click', function() {
+        if( $('#site-navigation.mobile').hasClass('hidden')) {
+            $('html').css('overflow-y', 'auto');
+        } else {
+            $('html').css('overflow-y', 'hidden');
+        }
     })
 
 });
