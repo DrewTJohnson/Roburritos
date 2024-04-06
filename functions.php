@@ -54,7 +54,8 @@ function crb_attach_theme_options() {
 				-> set_layout( 'tabbed-vertical')
 				-> add_fields( array (
 					Field::make( 'text', 'inquiry_title', 'Inquiry Title' ),
-						Field::make( 'text', 'inquiry_email', 'Inquiry Email' ),
+					Field::make( 'text', 'inquiry_url', 'Inquiry Url' ),
+					Field::make( 'checkbox', 'is_email', 'Is Email?')
 				) )
 				-> set_header_template( '
 					<% if ( inquiry_title ) { %>

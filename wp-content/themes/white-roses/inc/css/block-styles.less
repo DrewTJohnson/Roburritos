@@ -118,8 +118,12 @@
     transform: rotate(3deg);
 }
 
+.is-style-indent {
+    padding-left: 1rem;
+}
+
 .wp-block-button {
-    &.is-style-primary-button, &.is-style-secondary-button {
+    &.is-style-primary-button, &.is-style-secondary-button, &.is-style-tertiary-button {
         border-radius: 3px;
         transition: all 0.3s ease-in-out;
         backdrop-filter: none;
@@ -153,6 +157,16 @@
         }
         &:hover {
             box-shadow: -3px 3px 0px 0px @primaryOrange;
+        }
+    }
+    &.is-style-tertiary-button {
+        box-shadow: 0px 0px 0px 0px @white;
+        a {
+            color: @white;
+            background: @black;
+        }
+        &:hover {
+            box-shadow: -3px 3px 0px 0px @white;
         }
     }
 }

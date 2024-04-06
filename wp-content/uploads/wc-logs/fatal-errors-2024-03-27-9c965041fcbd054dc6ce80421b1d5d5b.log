@@ -1,0 +1,320 @@
+2024-03-27T23:14:09+00:00 CRITICAL syntax error, unexpected identifier "print_r", expecting ")" in /var/www/html/wp-content/themes/white-roses/functions.php on line 123
+
+2024-03-27T23:14:15+00:00 CRITICAL syntax error, unexpected identifier "var_dump", expecting ")" in /var/www/html/wp-content/themes/white-roses/functions.php on line 123
+
+2024-03-27T23:14:23+00:00 CRITICAL syntax error, unexpected identifier "Field", expecting ")" in /var/www/html/wp-content/themes/white-roses/functions.php on line 132
+
+2024-03-27T23:14:29+00:00 CRITICAL syntax error, unexpected identifier "Container" in /var/www/html/wp-content/themes/white-roses/functions.php on line 146
+
+2024-03-27T23:14:31+00:00 CRITICAL syntax error, unexpected identifier "Container" in /var/www/html/wp-content/themes/white-roses/functions.php on line 146
+
+2024-03-27T23:14:56+00:00 CRITICAL syntax error, unexpected identifier "title", expecting ")" in /var/www/html/wp-content/themes/white-roses/functions.php on line 127
+
+2024-03-27T23:15:04+00:00 CRITICAL syntax error, unexpected identifier "title", expecting ")" in /var/www/html/wp-content/themes/white-roses/functions.php on line 127
+
+2024-03-27T23:18:39+00:00 CRITICAL syntax error, unexpected identifier "carbon_get_post_meta", expecting ")" in /var/www/html/wp-content/themes/white-roses/functions.php on line 127
+
+2024-03-27T23:29:16+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:100
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 100
+
+2024-03-27T23:31:38+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php:542
+Stack trace:
+#0 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php(542): explode('/', Array)
+#1 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Repository.php(144): Carbon_Fields\Container\Container->get_field_by_name(Array)
+#2 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(29): Carbon_Fields\Container\Repository->get_field_in_containers(Array, 'post_meta')
+#3 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(69): Carbon_Fields\Helper\Helper::get_field('post_meta', '', Array)
+#4 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(114): Carbon_Fields\Helper\Helper::with_field_clone(2, 'post_meta', '', Array, Object(Closure))
+#5 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(169): Carbon_Fields\Helper\Helper::get_value(2, 'post_meta', '', Array)
+#6 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/functions.php(32): Carbon_Fields\Helper\Helper::get_post_meta(2, Array, '')
+#7 /var/www/html/wp-content/themes/white-roses/footer.php(100): carbon_get_post_meta(2, Array)
+#8 /var/www/html/wp-includes/template.php(790): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#10 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#11 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#12 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php on line 542
+
+2024-03-27T23:31:49+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php:542
+Stack trace:
+#0 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php(542): explode('/', Array)
+#1 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Repository.php(144): Carbon_Fields\Container\Container->get_field_by_name(Array)
+#2 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(29): Carbon_Fields\Container\Repository->get_field_in_containers(Array, 'post_meta')
+#3 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(69): Carbon_Fields\Helper\Helper::get_field('post_meta', '', Array)
+#4 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(114): Carbon_Fields\Helper\Helper::with_field_clone(2, 'post_meta', '', Array, Object(Closure))
+#5 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(169): Carbon_Fields\Helper\Helper::get_value(2, 'post_meta', '', Array)
+#6 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/functions.php(32): Carbon_Fields\Helper\Helper::get_post_meta(2, Array, '')
+#7 /var/www/html/wp-content/themes/white-roses/footer.php(100): carbon_get_post_meta(2, Array)
+#8 /var/www/html/wp-includes/template.php(790): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#10 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#11 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#12 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php on line 542
+
+2024-03-27T23:31:51+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php:542
+Stack trace:
+#0 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php(542): explode('/', Array)
+#1 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Repository.php(144): Carbon_Fields\Container\Container->get_field_by_name(Array)
+#2 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(29): Carbon_Fields\Container\Repository->get_field_in_containers(Array, 'post_meta')
+#3 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(69): Carbon_Fields\Helper\Helper::get_field('post_meta', '', Array)
+#4 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(114): Carbon_Fields\Helper\Helper::with_field_clone(2, 'post_meta', '', Array, Object(Closure))
+#5 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(169): Carbon_Fields\Helper\Helper::get_value(2, 'post_meta', '', Array)
+#6 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/functions.php(32): Carbon_Fields\Helper\Helper::get_post_meta(2, Array, '')
+#7 /var/www/html/wp-content/themes/white-roses/footer.php(100): carbon_get_post_meta(2, Array)
+#8 /var/www/html/wp-includes/template.php(790): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#10 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#11 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#12 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php on line 542
+
+2024-03-27T23:31:59+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php:542
+Stack trace:
+#0 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php(542): explode('/', Array)
+#1 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Repository.php(144): Carbon_Fields\Container\Container->get_field_by_name(Array)
+#2 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(29): Carbon_Fields\Container\Repository->get_field_in_containers(Array, 'post_meta')
+#3 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(69): Carbon_Fields\Helper\Helper::get_field('post_meta', '', Array)
+#4 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(114): Carbon_Fields\Helper\Helper::with_field_clone(2, 'post_meta', '', Array, Object(Closure))
+#5 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(169): Carbon_Fields\Helper\Helper::get_value(2, 'post_meta', '', Array)
+#6 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/functions.php(32): Carbon_Fields\Helper\Helper::get_post_meta(2, Array, '')
+#7 /var/www/html/wp-content/themes/white-roses/footer.php(100): carbon_get_post_meta(2, Array)
+#8 /var/www/html/wp-includes/template.php(790): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#10 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#11 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#12 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php on line 542
+
+2024-03-27T23:34:58+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php:542
+Stack trace:
+#0 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php(542): explode('/', Array)
+#1 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Repository.php(144): Carbon_Fields\Container\Container->get_field_by_name(Array)
+#2 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(29): Carbon_Fields\Container\Repository->get_field_in_containers(Array, 'post_meta')
+#3 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(69): Carbon_Fields\Helper\Helper::get_field('post_meta', '', Array)
+#4 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(114): Carbon_Fields\Helper\Helper::with_field_clone(2, 'post_meta', '', Array, Object(Closure))
+#5 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Helper/Helper.php(169): Carbon_Fields\Helper\Helper::get_value(2, 'post_meta', '', Array)
+#6 /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/functions.php(32): Carbon_Fields\Helper\Helper::get_post_meta(2, Array, '')
+#7 /var/www/html/wp-content/themes/white-roses/footer.php(98): carbon_get_post_meta(2, Array)
+#8 /var/www/html/wp-includes/template.php(790): require_once('/var/www/html/w...')
+#9 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#10 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#11 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#12 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#13 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#14 /var/www/html/index.php(17): require('/var/www/html/w...')
+#15 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/vendor/htmlburger/carbon-fields/core/Container/Container.php on line 542
+
+2024-03-27T23:39:18+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:100
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 100
+
+2024-03-27T23:40:59+00:00 CRITICAL Uncaught Error: Undefined constant "page" in /var/www/html/wp-content/themes/white-roses/footer.php:100
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 100
+
+2024-03-27T23:42:33+00:00 CRITICAL Uncaught Error: Call to undefined function post:page:1137() in /var/www/html/wp-content/themes/white-roses/footer.php:100
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 100
+
+2024-03-27T23:43:37+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:101
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 101
+
+2024-03-27T23:43:49+00:00 CRITICAL Uncaught Error: Undefined constant "title" in /var/www/html/wp-content/themes/white-roses/footer.php:101
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 101
+
+2024-03-27T23:43:50+00:00 CRITICAL Uncaught Error: Undefined constant "title" in /var/www/html/wp-content/themes/white-roses/footer.php:101
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 101
+
+2024-03-27T23:59:00+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:00+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:01+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:01+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:01+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:07+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/page.php(33): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:07+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:08+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:08+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+
+2024-03-27T23:59:08+00:00 CRITICAL Uncaught Error: Undefined constant "id" in /var/www/html/wp-content/themes/white-roses/footer.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(790): require_once()
+#1 /var/www/html/wp-includes/template.php(725): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/white-roses/404.php(36): get_footer()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/white-roses/footer.php on line 96
+

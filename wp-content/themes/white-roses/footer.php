@@ -76,15 +76,35 @@
 
 					<ul>
 						<?php
-						foreach ($inquiries as $inquiry) {
+						foreach ($inquiries as $inquiry) :
+							$inquiry_type = $inquiry['link_type'];
 							$inquiry_title = $inquiry['inquiry_title'];
 							$inquiry_email = $inquiry['inquiry_email'];
+							$inquiry_url = $inquiry['inquiry_url'];
+							$inquiry_page = $inquiry['inquiry_page'];
+
+							if ($inquiry_type == 'custom') :
 						?>
-							<li><?php echo $inquiry_title; ?> - <a href="mailto:<?php echo $inquiry_email; ?>"><?php echo $inquiry_email; ?></a></li>
+								<li><a href="<?php echo $inquiry_url; ?>"><?php echo $inquiry_title; ?></a></li>
+							<?php
+								elseif ($inquiry_type == 'email') :
+							?>
+								<li><a href="mailto:<?php echo $inquiry_email; ?>"><?php echo $inquiry_title; ?></a></li>
+							<?php
+								elseif ($inquiry_type == 'page') :
+								$inquiry_page_id = $inquiry_page[0]['id'];
+
+							?>
+								<li><a href="<?php echo get_page_link($inquiry_page_id); ?>"><?php echo get_the_title($inquiry_page_id); ?></a></li>
 						<?php
-						}
+							endif;
+
+						endforeach;
+
 						?>
+
 					</ul>
+
 				<?php endif; ?>
 
 			</div>
@@ -111,7 +131,7 @@
 		</div>
 	</div>
 	<div class="copyright-container">
-		<p class="copyright">© 2023 Roburrito's</p>
+		<p class="copyright">© <?php echo date("Y"); ?> Roburrito's</p>
 		<div class="privacy-policy">
 			<?php
 			wp_nav_menu(

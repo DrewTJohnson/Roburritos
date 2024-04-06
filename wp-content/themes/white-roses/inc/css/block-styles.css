@@ -121,23 +121,30 @@
 .is-style-rotated-heading {
   transform: rotate(3deg);
 }
+.is-style-indent {
+  padding-left: 1rem;
+}
 .wp-block-button.is-style-primary-button,
-.wp-block-button.is-style-secondary-button {
+.wp-block-button.is-style-secondary-button,
+.wp-block-button.is-style-tertiary-button {
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
   backdrop-filter: none;
 }
 .wp-block-button.is-style-primary-button a,
-.wp-block-button.is-style-secondary-button a {
+.wp-block-button.is-style-secondary-button a,
+.wp-block-button.is-style-tertiary-button a {
   box-shadow: none;
   border-radius: 3px;
 }
 .wp-block-button.is-style-primary-button:hover,
-.wp-block-button.is-style-secondary-button:hover {
+.wp-block-button.is-style-secondary-button:hover,
+.wp-block-button.is-style-tertiary-button:hover {
   box-shadow: -3px 3px 0px 0px #1F1F1F;
 }
 .wp-block-button.is-style-primary-button:hover a,
-.wp-block-button.is-style-secondary-button:hover a {
+.wp-block-button.is-style-secondary-button:hover a,
+.wp-block-button.is-style-tertiary-button:hover a {
   box-shadow: none;
   backdrop-filter: none;
 }
@@ -160,4 +167,14 @@
 }
 .wp-block-button.is-style-secondary-button:hover {
   box-shadow: -3px 3px 0px 0px #FF9E26;
+}
+.wp-block-button.is-style-tertiary-button {
+  box-shadow: 0px 0px 0px 0px #F8F7EE;
+}
+.wp-block-button.is-style-tertiary-button a {
+  color: #F8F7EE;
+  background: #1F1F1F;
+}
+.wp-block-button.is-style-tertiary-button:hover {
+  box-shadow: -3px 3px 0px 0px #F8F7EE;
 }

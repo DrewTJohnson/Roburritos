@@ -66,12 +66,65 @@ function crb_attach_theme_options() {
 			Field::make( 'complex', 'crb_inquiries', 'Inquiries' )
 				-> set_layout( 'tabbed-vertical')
 				-> add_fields( array (
-					Field::make( 'text', 'inquiry_title', 'Inquiry Title' ),
-						Field::make( 'text', 'inquiry_email', 'Inquiry Email' ),
+					Field::make( 'select', 'link_type', 'Link Type')
+						->add_options( array(
+							'email' =>	'Email',
+							'page'	=>	'Page',
+							'custom'	=>	'Custom Link'
+						) ),
+					Field::make( 'text', 'inquiry_title', 'Title' )
+						->set_conditional_logic( array(
+							'relation'	=>	'AND',
+							array(
+								'field'	=>	'link_type',
+								'value'	=>	array(
+									'email',
+									'custom'
+								),
+								'compare'	=>	'IN'
+							),
+						) ),
+					Field::make( 'text', 'inquiry_url', 'Url' )
+						->set_conditional_logic( array(
+							'relation'	=>	'AND',
+							array(
+								'field'	=>	'link_type',
+								'value'	=>	'custom',
+								'compare'	=>	'='
+							),
+						) ),
+					Field::make( 'text', 'inquiry_email', 'Email' )
+						->set_conditional_logic( array(
+							'relation'	=>	'AND',
+							array(
+								'field'	=>	'link_type',
+								'value'	=>	'email',
+								'compare'	=>	'='
+							),
+						) ),
+					Field::make( 'association', 'inquiry_page', 'Page')
+						->set_conditional_logic( array(
+							'relation'	=>	'AND',
+							array(
+								'field'	=>	'link_type',
+								'value'	=>	'page',
+								'compare'	=>	'='
+							),
+						))
+						->set_types( array(
+							array(
+								'type'	=>	'post',
+								'post_type'	=>	'page'
+								
+							)
+						))
+						->set_max( 1 )
 				) )
 				-> set_header_template( '
 					<% if ( inquiry_title ) { %>
 						<%- inquiry_title %>
+					<% } else { %>
+						<%- inquiry_page[0].title %>
 					<% } %>
 				' ),
 			Field::make( 'complex', 'crb_socials', 'Social Links' )
@@ -558,6 +611,20 @@ function white_roses_register_block_styles() {
 			'name' =>	'secondary-button',
 			'label'	=>	__('Secondary Button'),
 			'default'	=>	false,	
+		),
+	);
+	register_block_style('core/button',
+		array(
+			'name' =>	'tertiary-button',
+			'label'	=>	__('Tertiary Button'),
+			'default'	=>	false,
+		),
+	);
+	register_block_style('core/paragraph',
+		array(
+			'name'	=>	'indent',
+			'label'	=>	__('indent'),
+			'default'	=>	false,
 		),
 	);
 }
